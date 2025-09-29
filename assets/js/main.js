@@ -312,3 +312,13 @@ function emailValidate() {
     return true
   }
  }
+ function ageSetter(){
+  var today = new Date();
+  var birthDate = new Date("2005-02-29"); 
+  var age = today.getFullYear() - birthDate.getFullYear();
+  var ageComponent = document.getElementById('age-display');
+  ageComponent.innerText=age;
+  
+ }
+
+ Document.onload=ageSetter();
